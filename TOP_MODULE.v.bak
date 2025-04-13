@@ -1,0 +1,39 @@
+module TOP_MODULE (A,B,C,D,E,segA1,segB1,segC1,segD1,segE1,segF1,segG1);
+    input A,B,C,D,E;
+    output segA1,segB1,segC1,segD1,segE1,segF1,segG1;
+	 output segA2,segB2,segC2,segD2,segE2,segF2,segG2;
+    wire C1;  // Carry entre os dois somadores de 1 bit
+
+    // Instanciando o primeiro somador completo de 1 bit (bit menos significativo)
+    HexaMaiSig DISPLAY02 (
+        .A(A),
+        .B(B),
+        .C(C),
+        .D(D),
+		  .E(E),
+        .segA(segA2),
+		  .segB(segB2),
+		  .segC(segC2),
+		  .segD(segD2),
+		  .segE(segE2),
+		  .segF(segF2),
+		  .segG(segG2)
+    );
+
+    // Instanciando o segundo somador completo de 1 bit (bit mais significativo)
+     HexaMenoSig DISPLAY01 (
+        .A(A),
+        .B(B),
+        .C(C),
+        .D(D),
+		  .E(E),
+        .segA(segA1),
+		  .segB(segB1),
+		  .segC(segC1),
+		  .segD(segD1),
+		  .segE(segE1),
+		  .segF(segF1),
+		  .segG(segG1)
+    );
+
+endmodule

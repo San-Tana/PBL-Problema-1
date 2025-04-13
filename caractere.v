@@ -1,0 +1,69 @@
+module caractere(A, B, C, D, E, a, b, c, d, e, f, g);
+	input A, B, C, D, E;
+	output a, b, c, d, e, f, g;
+	
+	// Negados
+	wire nA, nB, nC, nD, nE;
+	not notA(nA, A);
+	not notB(nB, B);
+	not notC(nC, C);
+	not notD(nD, D);
+	not notE(nE, E);
+	
+	// segmento a:
+	wire f1, f2, f3, f4;
+	and anda0(f1, nA, nB, nC, nD, E);
+	and anda1(f2, nA, C, nD, nE);
+	and anda2(f3, nA, B, C, nE);
+	and anda3(f4, A, nB, nC, D, E);
+	or ora(a, f1, f2, f3, f4);
+	
+	// segmento b
+	wire f5, f6, f7, f8, f9, f10, f11, f12;
+	and andb0(f5, C, nD, E);
+	and andb1(f6, nB, C, D, nE);
+	and andb2(f7, B , nC, D, nE); // Reutilizado no segmento 'e';
+	and andb3(f8, B, C, nD);
+	and andb4(f9, B, C, E); // Reutilizado no segmento 'c';
+	and andb5(f10, A, nE);
+	and andb6(f11, A, C); // Reutilizado nos segmentos 'c', 'e' e 'f';
+	and andb7(f12, A, B); // Reutilizado nos segmentos 'c', 'e' e 'f';
+	or orb(b, f5, f6, f7, f8, f9, f10, f11, f12);
+	
+	// segmento c
+	wire f13;
+	and andc0(f13, nC, D, nE);
+	or orc(c, f11, f12, f13, f9);
+	
+	// segmento d
+	wire f14, f15, f16, f17, f18;
+	and andd0(f15, nB, nC, nD, E); // Reutilizado no segmento 'g'
+	and andd1(f16, nA, nB, C, nD, nE);
+	and andd2(f17, nA, nB, C, D, E); // Reutilizado no segmento 'g';
+	and andd3(f18, A, nB, nC, nE);
+	and andd4(f14, nA, B, nC, D, E);
+	or ord(d, f15, f16, f17, f18, f14);
+	
+	// segmento e
+	wire f19, f20, f21;
+	and ande0(f19, nB, C, nD);
+	and ande1(f20, nA, nC, nD, E);
+	and ande2(f21, nB, D, E);
+	or ore(e, f19, f7, f11, f12, f20, f21);
+	
+	// segmento f
+	wire f22, f23, f24, f29;
+	and andf0(f22, nA, nB, nC, E);	
+	and andf1(f23, nA, nB, nC, D);
+	and andf2(f24, nA, nB, D, E);
+	and andf3(f29, B, D, nE);
+	or orf(f, f22, f11, f12, f23, f24, f29);
+	
+	// segmento g
+	wire f25, f26, f27, f28;
+	and andg0(f25, nA, nB, nC, nD);
+	and andg1(f26, nA, B, nC, D, nE);
+	and andg2(f27, nA, B, C, nD, E);
+	and andg3(f28, A, nB, nC, D);
+	or org(g, f25, f17, f26, f27, f28, f15);	
+endmodule
