@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Disp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				},
+				{
+					"name" : "E",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
